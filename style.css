@@ -1,0 +1,31 @@
+h1, p {
+  font-family: Lato;
+}
+.main{
+ position: fixed;
+    top: 0;
+    left: 0;
+ 
+    background: linear-gradient(114.1501577487deg, #18b2b8 4.9296141814%, #245fc7 97.838894682%);
+    z-index: 10;
+    margin-right: 20;
+   height: 4rem;
+color: white;
+font-size: 20px;
+
+}
+.main a {
+    font-weight: 200;
+    color: white;
+    font-size: 25px;
+    margin: 10px;
+}
+.style{
+  margin-top: 70px;
+}
+.pull-right{
+  float:right;
+}
+label{
+ font-weight: bold;
+}
