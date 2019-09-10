@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Books from './Books';
+import { Link } from 'react-router-dom';
 export default class Login extends Component {
   constructor(props) {
     super(props);
@@ -18,11 +20,11 @@ export default class Login extends Component {
 
   }
   onSubmit() {
-    if (this.state.name == "test" && this.state.password == "test"){
-   alert("submitted sucessfully")
-   this.props.searchUpdated(this.state)
+    if (this.state.name == "test" && this.state.password == "test") {
+      alert("submitted sucessfully")
+      this.props.searchUpdated(this.state)
     }
-   
+
     else
       alert("failed")
 
@@ -44,9 +46,11 @@ export default class Login extends Component {
           value={this.state.password}
           onChange={this.handlePassword.bind(this)} /> <br />
 
-        <button type="button" className="btn btn-primary"
-          onClick={this.onSubmit.bind(this)}>Submit</button>
-
+        <Link to="/Books"> <button type="button" className="btn btn-primary"
+          onClick={this.onSubmit.bind(this)}>
+          Submit
+        </button>
+        </Link>
       </div>
     )
   }
@@ -55,7 +59,7 @@ export default class Login extends Component {
 
 const mapDispatchToProps = dispatch => {
   return {
-    searchUpdated: (details) => dispatch({ type: 'LOGINDETAILS',details }),
+    searchUpdated: (details) => dispatch({ type: 'LOGINDETAILS', details }),
   }
 
 }

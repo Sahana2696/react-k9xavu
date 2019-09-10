@@ -9,9 +9,6 @@ const globalstate = {
     contactno: ""
   }
 }
-
-
-
 function reducer(state = globalstate, action) {
   switch (action.type) {
     case "LOGINDETAILS":
@@ -20,7 +17,7 @@ function reducer(state = globalstate, action) {
       return state.details = action.details
 
     case "CONTACTDETAILS":
-    
+
     console.log("action",action)
       return state.contactdetails = action.contactdetails
 
