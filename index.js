@@ -6,9 +6,10 @@ import Books from './Books';
 import Contact from './Contact';
 import Aboutus from './Aboutus';
 import Login from './Login';
-import  Pagenotfound from './Pagenotfound';
+import Pagenotfound from './Pagenotfound';
 import './style.css';
-
+import { Provider } from 'react-redux';
+import store from './store'
 class App extends Component {
 
   render() {
@@ -22,7 +23,7 @@ class App extends Component {
               <Link to='/Books'>Books</Link>
               <Link to='/Contact'>Contact</Link>
               <Link to='/Aboutus'>Aboutus</Link>
-              <Link to='/Pagenotfound'>Pagenotfound</Link>
+
 
 
             </nav>
@@ -35,7 +36,7 @@ class App extends Component {
               <Route exact path='/Books' component={Books} />
               <Route exact path='/Contact' component={Contact} />
               <Route exact path='/Aboutus' component={Aboutus} />
-              <Route exact path='/Pagenotfound' component={Pagenotfound} />
+              <Route exact path='' component={Pagenotfound} />
             </Switch>
           </div>
 
@@ -44,4 +45,9 @@ class App extends Component {
     );
   }
 }
-render(<App />, document.getElementById('root'));
+
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('root'));
