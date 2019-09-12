@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Books from './Books';
 import { Link } from 'react-router-dom';
+import Home from './Home';
 export default class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
       name: '',
-      password: ''
+      password: '',
+      errorMsg: false
 
     }
   }
@@ -20,20 +22,27 @@ export default class Login extends Component {
 
   }
   onSubmit() {
-    if (this.state.name == "test" && this.state.password == "test") {
-      alert("submitted sucessfully")
-      this.props.searchUpdated(this.state)
+    
+     if (this.state.name == "test" && this.state.password == "test") {
+      this.setState({ errorMsg: false })
     }
-
-    else
-      alert("failed")
-
-  }
+    else {
+      this.setState({ errorMsg: true })
+    }
+      this.props.searchUpdated(this.state)
+      this.props.history.push('/Home')
+  } 
+   
 
   render() {
     return (
       <div className="form-group col-lg-3">
-
+          {
+          this.state.errorMsg &&
+          <div className="alert alert-danger">
+            <strong>ERROR!</strong> Invalid Username or Password.
+        </div>
+        }
         <label>Name</label>
         <input type="name"
           className="form-control"
