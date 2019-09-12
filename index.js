@@ -18,8 +18,8 @@ class App extends Component {
         <BrowserRouter>
           <div className="col-lg-12 main">
             <nav className="navbar navbar-light pull-right">
+             <Link to='/Blog'>Blog</Link>
               <Link to='/Login'>Login</Link>
-              <Link to='/Blog'>Blog</Link>
               <Link to='/Books'>Books</Link>
               <Link to='/Contact'>Contact</Link>
               <Link to='/Aboutus'>Aboutus</Link>
@@ -30,13 +30,13 @@ class App extends Component {
           </div>
           <div className="style">
             <Switch>
-              <Route exact path='/' component={Login} />
+            
               <Route exact path='/Login' component={Login} />
               <Route exact path='/Blog' component={Blog} />
               <Route exact path='/Books' component={Books} />
               <Route exact path='/Contact' component={Contact} />
               <Route exact path='/Aboutus' component={Aboutus} />
-              <Route exact path='' component={Pagenotfound} />
+           
             </Switch>
           </div>
 

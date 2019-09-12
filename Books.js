@@ -15,7 +15,9 @@ class Books extends Component {
 
   }
   render() {
+    console.log("details",this.props.Details)
     return (
+
 
       // <div className="form-group col-lg-3">
 
@@ -26,6 +28,8 @@ class Books extends Component {
       // <button type="button" className="btn btn-primary">Submit</button>
       <div>
         {
+          
+          this.props.Details &&
           Object.keys(this.props.Details).map(key => {
             return <li>{this.props.Details[key]}</li>
           })

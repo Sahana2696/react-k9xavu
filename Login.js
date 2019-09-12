@@ -46,11 +46,11 @@ export default class Login extends Component {
           value={this.state.password}
           onChange={this.handlePassword.bind(this)} /> <br />
 
-        <Link to="/Books"> <button type="button" className="btn btn-primary"
+       <button type="button" className="btn btn-primary"
           onClick={this.onSubmit.bind(this)}>
           Submit
         </button>
-        </Link>
+        
       </div>
     )
   }
