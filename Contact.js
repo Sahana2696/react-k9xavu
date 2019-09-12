@@ -22,13 +22,9 @@ class Contact extends Component {
 
 
   onSubmit() {
-    if (this.state.name == "test" && this.state.emailid == "test" && this.state.contactno == "test"){
-      alert("submitted sucessfully")
+    
       this.props.sendUpdated(this.state)
-    }
-      
-    else
-      alert("failed")
+    
 
   }
   render() {

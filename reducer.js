@@ -7,7 +7,9 @@ const globalstate = {
     name: "",
     emailid: "",
     contactno: ""
-  }
+  },
+  test:"Hi"
+  
 }
 function reducer(state = globalstate, action) {
   switch (action.type) {
@@ -19,7 +21,15 @@ function reducer(state = globalstate, action) {
     case "CONTACTDETAILS":
 
     console.log("action",action)
-      return state.contactdetails = action.contactdetails
+     // return state.contactdetails = action.contactdetails
+      
+      return{
+        ...state,
+          contactdetails:action.contactdetails,
+          test:"Test"
+        
+      }
+        
 
     default:
       return state;
