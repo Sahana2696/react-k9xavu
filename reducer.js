@@ -16,7 +16,10 @@ function reducer(state = globalstate, action) {
     case "LOGINDETAILS":
 
       console.log("action", action)
-      return state.details = action.details
+      return {
+        ...state,
+      details : action.details
+      }
 
     case "CONTACTDETAILS":
 

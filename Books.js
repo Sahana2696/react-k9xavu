@@ -42,5 +42,5 @@ class Books extends Component {
 
 export default connect(mapStateToProps, null)(Books);
 function mapStateToProps(state) {
-  return { Details: state };
+  return { Details: state.details };
 }
