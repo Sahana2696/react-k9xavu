@@ -25,12 +25,13 @@ export default class Login extends Component {
     
      if (this.state.name == "test" && this.state.password == "test") {
       this.setState({ errorMsg: false })
+        this.props.history.push('/Home')
     }
     else {
       this.setState({ errorMsg: true })
     }
       this.props.searchUpdated(this.state)
-      this.props.history.push('/Home')
+    
   } 
    
 
