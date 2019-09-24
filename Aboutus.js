@@ -23,7 +23,7 @@ export default class Aboutus extends Component {
         {
           this.state.data &&
           this.state.data.map(detail=>{
-            return<li>{detail.id}</li>
+            return<li>{detail.title}</li>
           })
         }
 
